@@ -7,12 +7,19 @@
     </head>
     <body>
         <h1><%= title %></h1>
+        <% if (locals.errors) { %>
+            <ul>
+                <% errors.forEach((error) => { %>
+                    <li><%= error.msg %></li>
+                <% }) %>
+            </ul>
+        <% } %>
         <form method="POST", action="/new">
             <label> Name:
-                <input type="text" name="name">
+                <input type="text" name="username" id="username" required>
             </label>
             <label> Message:
-            <input type="text" name="text">
+            <input type="text" name="text" id="text" required>
             </label>
             <input type="submit" value="Submit">
         </form>
