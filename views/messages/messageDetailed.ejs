@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><%= message.user %>'s Message | mini-message-board</title>
+        <title><%= message.username %>'s Message | mini-message-board</title>
     </head>
     <body>
-        <h1><%= message.user %></h1>
+        <h1><%= message.username %></h1>
         <p><%= message.text %></p>
-        <p><%= message.added %></p>
+        <p>ID: <%= message.id %></p>
+        <p>Posted on: <%= message.added %></p>
         <a href="/"><button>Back</button></a>
     </body>
 </html>
